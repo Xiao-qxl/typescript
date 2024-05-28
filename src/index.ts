@@ -65,8 +65,24 @@ function combine(a: number | string, b: number | string): number | string {
 }
 const combine1 = combine("a", "b")
 const combine2 = combine(2, 3)
-console.log(combine1, combine2);
+console.log('combine函数调用', combine1, combine2);
 
 function sum1(a: number, b: number, c?: number): number {
     return a + b + (c || 0);
 }
+
+// 枚举
+enum Gender1 { // 默认从0开始
+    Male = "男",
+    Female = "女"
+}
+let gender: Gender1 = Gender1.Male;
+console.log('gender', gender);
+
+function printEnumObj(obj: object): void {
+    Object.values(obj)
+        .forEach(v => {
+            console.log(v);
+        })
+}
+printEnumObj(Gender1)
