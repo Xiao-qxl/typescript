@@ -7,6 +7,10 @@
     ],
     "outDir": "./dist",
     "strictNullChecks": true,
+    "removeComments": true, // 移除注释
+    "esModuleInterop": true, // 允许导入非默认导出
+    "noEmitOnError": true, // 禁止编译错误
+    "moduleResolution": "node", // 模块解析策略
   },
   "include": [
     "./src"
