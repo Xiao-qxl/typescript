@@ -86,3 +86,39 @@ function printEnumObj(obj: object): void {
         })
 }
 printEnumObj(Gender1)
+
+// 接口
+// 接口的继承
+// readly只读修饰符
+interface Condition {
+    (num: number): boolean;
+}
+interface Condition2 extends Condition {
+    readonly msg: string;
+}
+interface Condition3 extends Condition, Condition2 {
+    msg2: string;
+}
+// 类型别名定义
+type C {
+    T1: number[];
+}
+type C2 = {
+    T2: number;
+}
+type C3 = {
+    T3: boolean;
+} & C & C2;
+function sum2(numbers: number[], callback: Condition): number {
+    let s = 0;
+    numbers.forEach(n => {
+        if (callback(n)) {
+            s += n;
+        }
+    })
+    return s
+}
+
+// 修饰符
+// const arr5: readonly number[] = [1, 2, 3];
+const arr5: ReadonlyArray<number> = [1, 2, 3];
