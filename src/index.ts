@@ -100,7 +100,7 @@ interface Condition3 extends Condition, Condition2 {
     msg2: string;
 }
 // 类型别名定义
-type C {
+type C = {
     T1: number[];
 }
 type C2 = {
